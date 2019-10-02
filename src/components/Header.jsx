@@ -21,9 +21,8 @@ export default function Header(props) {
                     class="snipcart-add-item"
                     data-item-id="2"
                     data-item-name="Bacon"
-                    data-item-price="3.00"
-                    data-item-weight="20"
-                    data-item-url="https://thecarddrop.com/#/"
+                    data-item-price="50.00"
+                    data-item-url="https://thecarddrop.com/#/api/products"
                     data-item-description="Some fresh bacon">
                     Buy bacon
                 </button>

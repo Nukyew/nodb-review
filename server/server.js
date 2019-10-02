@@ -4,6 +4,7 @@ const app = express()
 const {SERVER_PORT} = process.env
 const grassCtrl = require('./controllers/grassCtrl')
 const pokeCtrl = require('./controllers/pokeCtrl')
+const prodCtrl = require('./controllers/prodCtrl')
 
 // TOP LEVEL MIDDLEWARE
 app.use(express.json())
@@ -16,6 +17,8 @@ app.post('/api/pokemon', pokeCtrl.catch)
 app.put('/api/pokemon/:id', pokeCtrl.rename)
 app.delete('/api/pokemon/:id', pokeCtrl.release)
 app.get('/api/pokemon', pokeCtrl.getAllPokemon)
+
+app.get('/api/products', prodCtrl.getProducts)
 
 const path = require('path')
 app.get('*', (req, res) => {
