@@ -18,7 +18,7 @@ app.put('/api/pokemon/:id', pokeCtrl.rename)
 app.delete('/api/pokemon/:id', pokeCtrl.release)
 app.get('/api/pokemon', pokeCtrl.getAllPokemon)
 
-app.get('/api/products', prodCtrl.getProducts)
+app.get('/#/api/products', prodCtrl.getProducts)
 
 const path = require('path')
 app.get('*', (req, res) => {
