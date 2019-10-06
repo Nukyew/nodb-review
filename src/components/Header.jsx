@@ -46,11 +46,20 @@ export default class Header extends React.Component {
                         >
                         Subscribe now!
                     </button>
-                    <button
+                    {/* <button
                         class="snipcart-add-item"
                         data-item-id="2"
                         data-item-name="Bacon"
                         data-item-price={`${totalPrice}`}
+                        data-item-url="https://thecarddrop.com/api/products/bacon"
+                        data-item-description="Some fresh bacon">
+                        Buy bacon
+                    </button> */}
+                    <button
+                        class="snipcart-add-item"
+                        data-item-id="2"
+                        data-item-name="Bacon"
+                        data-item-price="80"
                         data-item-url="https://thecarddrop.com/api/products/bacon"
                         data-item-description="Some fresh bacon">
                         Buy bacon
