@@ -1,0 +1,1 @@
+SELECT items_in_cart FROM customer;

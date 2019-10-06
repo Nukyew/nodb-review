@@ -22,6 +22,8 @@ app.get('/api/pokemon', pokeCtrl.getAllPokemon)
 app.get('/api/products/yearly-drop', prodCtrl.getProducts)
 app.get('/api/products/bacon', prodCtrl.getBacon)
 
+app.post('/api/customer/:id', prodCtrl.saveNumOfItems)
+
 const path = require('path')
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../build/index.html'))
