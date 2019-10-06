@@ -19,6 +19,7 @@ app.delete('/api/pokemon/:id', pokeCtrl.release)
 app.get('/api/pokemon', pokeCtrl.getAllPokemon)
 
 app.get('/api/products/yearly-drop', prodCtrl.getProducts)
+app.get('/api/products/bacon', prodCtrl.getBacon)
 
 const path = require('path')
 app.get('*', (req, res) => {
