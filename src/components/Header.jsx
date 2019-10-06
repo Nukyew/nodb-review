@@ -8,13 +8,12 @@ export default function Header(props) {
             <h1 onClick={() => audio.play()}>Pokemon Catcher 2000</h1>
             {/* <img src={props.image}/> */}
             <button class="snipcart-add-item"
-                    data-item-name="My Subscription"
-                    data-item-id="subscription"
-                    data-item-url="https://thecarddrop.com/"
+                    data-item-name="Yearly Drop"
+                    data-item-id="yearly-drop"
+                    data-item-url="https://thecarddrop.com/api/products/yearly-drop"
                     data-item-price="20.00"
-                    data-item-payment-interval="Month"
-                    data-item-payment-interval-count="2"
-                    data-item-payment-trial="10">
+                    data-item-payment-interval="Year"
+                    >
                     Subscribe now!
                 </button>
                 <button
