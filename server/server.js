@@ -1,10 +1,11 @@
 require('dotenv').config()
 const express = require('express')
 const app = express()
-const {SERVER_PORT} = process.env
+const {SERVER_PORT, CONNECTION_STRING} = process.env
 const grassCtrl = require('./controllers/grassCtrl')
 const pokeCtrl = require('./controllers/pokeCtrl')
 const prodCtrl = require('./controllers/prodCtrl')
+const massive = require('massive')
 
 // TOP LEVEL MIDDLEWARE
 app.use(express.json())
@@ -26,4 +27,8 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../build/index.html'))
 })
 
-app.listen(SERVER_PORT, () => console.log(`${SERVER_PORT} happy little accidents`))
+massive(CONNECTION_STRING).then(db => {
+    app.set('db', db)
+    console.log('db is connect')
+    app.listen(SERVER_PORT, () => console.log(`${SERVER_PORT} happy little accidents`))
+})
